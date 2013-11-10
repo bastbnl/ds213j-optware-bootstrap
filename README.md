@@ -6,7 +6,7 @@ Synology ds213j optware manual bootstrap guide.
 Introduction
 ------------
 
-Actually there's no xsh bootstrap for the ds213j (Marvell Armada 370 ARMv7l) although the existing Marvell Kirkwood mv6281 binaries are compatible (http://ipkg.nslu2-linux.org/feeds/optware/cs08q1armel/). So this is a small guide to setup manually the optware environment (ipkg, PATH and init scripts).
+Actually there's no xsh bootstrap for the ds213j (Marvell Armada 370 ARMv7l) although the existing Marvell Kirkwood mv6281 binaries are compatible (http://ipkg.nslu2-linux.org/feeds/optware/cs08q1armel/). So this is a small guide to setup manually the optware environment (ipkg, PATH and init scripts). You should be able to login as root on your Synology.
 
 Create optware root directory
 ------------
@@ -82,3 +82,13 @@ esac
 exit 0
 </pre>
 (source: a working optware env)
+
+Check init scripts
+------------
+This makes sure there are no copy-paste errors in the scripting you just created:
+<pre>
+sh -n /etc/rc.local
+sh -n /etc/rc.optware
+</pre>
+
+These commands should not produce any output.
