@@ -30,10 +30,17 @@ $ echo "src cross $feed" > /opt/etc/ipkg/feeds.conf
 
 Set PATH
 -------------------
-Add the following line to /etc/profile:
+Add the following line to /etc/profile before the export PATH line:
 <pre>
 PATH=/opt/bin:/opt/sbin:$PATH
 </pre>
+
+Source the profile if you want to able to use ipkg from now on:
+<pre>
+. /etc/profile
+</pre>
+
+You'll be able to use ipkg after your next logon to the Synology.
 
 Create init scripts
 -------------------
