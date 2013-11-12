@@ -40,7 +40,7 @@ Source the profile if you want to able to use ipkg from now on:
 . /etc/profile
 </pre>
 
-You'll be able to use ipkg after your next logon to the Synology.
+You'll be able to use ipkg anyway when you logon to the Synology.
 
 Create init scripts
 -------------------
@@ -92,7 +92,7 @@ exit 0
 
 Check init scripts
 ------------
-This makes sure there are no copy-paste errors in the scripting you just created:
+Make sure the scripts you've just created are syntax error free:
 <pre>
 sh -n /etc/rc.local
 sh -n /etc/rc.optware
